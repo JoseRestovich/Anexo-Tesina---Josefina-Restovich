@@ -457,43 +457,83 @@ df_Cpm_p3$n <- factor(df_Cpm_p3$n, levels = c("20", "25", "50", "100"))
 # Crear los gráficos individuales con la leyenda activada
 plot_Cp_p1 <- ggplot(df_Cp_p1, aes(x = Cp_p1, fill = n)) +
   geom_density(aes(color = n), alpha = 0.5, size = 1.5) +
-  labs(title = expression("Gráfico de Densidad de " * C[p(p[1])]), x = "Valores", y = "Densidad") +
+  labs(title = expression("Índice " * hat(C)[p(p[1])]), x = "Índice estimado", y = "Densidad") +
   scale_fill_manual(values = c("20" = "olivedrab3", "25" = "cornflowerblue", "50" = "turquoise", "100" = "coral"),
                     name = "Tamaño de muestra", labels = c("20", "25", "50", "100")) +
   scale_color_manual(values = c("20" = "olivedrab3", "25" = "cornflowerblue", "50" = "turquoise", "100" = "coral"),
                      name = "Tamaño de muestra", labels = c("20", "25", "50", "100")) +
   theme_bw() +
-  geom_vline(xintercept = Cp_p1__2, linetype = "dashed", color = "black")
+  geom_vline(xintercept = Cp_p1__2, linetype = "dashed", color = "black")+
+  theme(
+    plot.title = element_text(size = 24, face = "bold"),
+    axis.title.x = element_text(size = 22),
+    axis.title.y = element_text(size = 22),
+    axis.text.x = element_text(size = 20),
+    axis.text.y = element_text(size = 20),
+    legend.title = element_text(size = 26),
+    legend.text = element_text(size = 16)
+  )
+
 
 plot_Cpk_p <- ggplot(df_Cpk_p, aes(x = Cpk_p, fill = n)) +
   geom_density(aes(color = n), alpha = 0.5, size = 1.5) +
-  labs(title = expression("Gráfico de Densidad de " * C[pk(p)]), x = "Valores", y = "Densidad") +
+  labs(title = expression("Índice " * hat(C)[pk(p)]), x = "Índice estimado", y = "Densidad") +
   scale_fill_manual(values = c("20" = "olivedrab3", "25" = "cornflowerblue", "50" = "turquoise", "100" = "coral"),
                     name = "Tamaño de muestra", labels = c("20", "25", "50", "100")) +
   scale_color_manual(values = c("20" = "olivedrab3", "25" = "cornflowerblue", "50" = "turquoise", "100" = "coral"),
                      name = "Tamaño de muestra", labels = c("20", "25", "50", "100")) +
   theme_bw() +
-  geom_vline(xintercept = Cpk_p__2, linetype = "dashed", color = "black")
+  geom_vline(xintercept = Cpk_p__2, linetype = "dashed", color = "black")+
+  theme(
+    plot.title = element_text(size = 24, face = "bold"),
+    axis.title.x = element_text(size = 22),
+    axis.title.y = element_text(size = 22),
+    axis.text.x = element_text(size = 20),
+    axis.text.y = element_text(size = 20),
+    legend.title = element_text(size = 26),
+    legend.text = element_text(size = 16)
+  )
+
 
 plot_Cpk_p2 <- ggplot(df_Cpk_p2, aes(x = Cpk_p2, fill = n)) +
   geom_density(aes(color = n), alpha = 0.5, size = 1.5) +
-  labs(title = expression("Gráfico de Densidad de " * C[pk(p[2])]), x = "Valores", y = "Densidad") +
+  labs(title = expression("Índice " * hat(C)[pk(p[2])]), x = "Índice estimado", y = "Densidad") +
   scale_fill_manual(values = c("20" = "olivedrab3", "25" = "cornflowerblue", "50" = "turquoise", "100" = "coral"),
                     name = "Tamaño de muestra", labels = c("20", "25", "50", "100")) +
   scale_color_manual(values = c("20" = "olivedrab3", "25" = "cornflowerblue", "50" = "turquoise", "100" = "coral"),
                      name = "Tamaño de muestra", labels = c("20", "25", "50", "100")) +
   theme_bw() +
-  geom_vline(xintercept = Cpk_p2__2, linetype = "dashed", color = "black")
+  geom_vline(xintercept = Cpk_p2__2, linetype = "dashed", color = "black")+
+  theme(
+    plot.title = element_text(size = 24, face = "bold"),
+    axis.title.x = element_text(size = 22),
+    axis.title.y = element_text(size = 22),
+    axis.text.x = element_text(size = 20),
+    axis.text.y = element_text(size = 20),
+    legend.title = element_text(size = 26),
+    legend.text = element_text(size = 16)
+  )
+
 
 plot_Cpm_p3 <- ggplot(df_Cpm_p3, aes(x = Cpm_p3, fill = n)) +
   geom_density(aes(color = n), alpha = 0.5, size = 1.5) +
-  labs(title = expression("Gráfico de Densidad de " * C[pm(p[3])]), x = "Valores", y = "Densidad") +
+  labs(title = expression("Índice " * hat(C)[pm(p[3])]), x = "ïndice estimado", y = "Densidad") +
   scale_fill_manual(values = c("20" = "olivedrab3", "25" = "cornflowerblue", "50" = "turquoise", "100" = "coral"),
                     name = "Tamaño de muestra", labels = c("20", "25", "50", "100")) +
   scale_color_manual(values = c("20" = "olivedrab3", "25" = "cornflowerblue", "50" = "turquoise", "100" = "coral"),
                      name = "Tamaño de muestra", labels = c("20", "25", "50", "100")) +
   theme_bw() +
-  geom_vline(xintercept = Cpm_p3__2, linetype = "dashed", color = "black")
+  geom_vline(xintercept = Cpm_p3__2, linetype = "dashed", color = "black")+
+  theme(
+    plot.title = element_text(size = 24, face = "bold"),
+    axis.title.x = element_text(size = 22),
+    axis.title.y = element_text(size = 22),
+    axis.text.x = element_text(size = 20),
+    axis.text.y = element_text(size = 20),
+    legend.title = element_text(size = 26),
+    legend.text = element_text(size = 16)
+  )
+
 
 
 # Función para extraer la leyenda de un gráfico
